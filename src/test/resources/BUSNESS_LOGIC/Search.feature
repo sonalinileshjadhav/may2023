@@ -1,8 +1,9 @@
 Feature: Search functionality
 
 Background: User successfully opened main page
-Given user open "chrome" brouser with exe as "C:\\Automation\\chromedriver.exe"
-Given user enter url as "http://primusbank.qedgetech.com/"
+Given user open "chrome" brouser 
+Given user enter url 
+
 When user enter "Admin" as Username 
 When user enter "Admin" as Password
 When user click on Login button 

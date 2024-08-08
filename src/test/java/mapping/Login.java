@@ -7,27 +7,26 @@ import utility.SeleniumOperations;
 
 public class Login {
 	
-	@Given("user open {string} brouser with exe as {string}")
-	public void user_open_brouser_with_exe_as(String bname, String exe)
+	@Given("user open {string} brouser")
+	public void user_open_brouser_with_exe_as(String bname)
 	{
-		   Object[] input1 =new Object[2];
+		   Object[] input1 =new Object[1];
            input1[0]=bname;
-           input1[1]=exe;
+           
      SeleniumOperations.brouserLaunch(input1); 
 	}
 	
 
 
-	@Given("user enter url as {string}")
-	public void user_enter_url_as(String url) 
+	@Given("user enter url")
+	public void user_enter_url_as() 
 	{
-		 Object[]input2=new Object[1];
-         input2[0]=url;
-   SeleniumOperations.openApplication(input2);
+		
+   SeleniumOperations.openApplication();
 	    
 	}
 
-	@When("user enter (.+) as Username")
+	@When("user enter {string} as Username")
 	public void user_enter_as_username(String uname) 
 	{
 		Object[] input3 =new Object[2];
@@ -36,7 +35,7 @@ public class Login {
   SeleniumOperations.enterTextOnUi(input3); 
 	}
 
-	@When("user enter (.+) as Password")
+	@When("user enter {string} as Password")
 	public void user_enter_as_password(String pass) 
 	{
 		Object[] input4 =new Object[2];
